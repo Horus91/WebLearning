@@ -38,17 +38,16 @@ const theQuoteForYou = {
     "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.",
   ],
   //function generating random quote
-  generateRandomQuote(array) {
-    array.push(
+  generateRandomQuote() {
+    const quotesArray = [];
+    quotesArray.push(
       this.nationality[Math.floor(Math.random() * this.nationality.length)]
     );
-    array.push(this.sign[Math.floor(Math.random() * this.sign.length)]);
-    array.push(this.quote[Math.floor(Math.random() * this.quote.length)]);
-    return array.join("\n");
+    quotesArray.push(this.sign[Math.floor(Math.random() * this.sign.length)]);
+    quotesArray.push(this.quote[Math.floor(Math.random() * this.quote.length)]);
+    return quotesArray;
   },
 };
 
 //container
-const quotesArray = [];
-
-console.log(theQuoteForYou.generateRandomQuote(quotesArray));
+console.log(theQuoteForYou.generateRandomQuote());

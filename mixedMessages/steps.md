@@ -9,4 +9,4 @@ the project has an objective of generating random messages:
   - Gender
   - sign
   - inspirational text
-- function iterating and pushing to the container array
+- function iterating and pushing to the container array(can be within the object)
